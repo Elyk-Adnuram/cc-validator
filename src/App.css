@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+/* Stying of Header component */
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: #1c1c1c;
+  color: #ffff;
+}
+
+/* Stying of banned countries component */
+.bannedComponent {
+  text-align: center;
+}
+
+.margin-top {
+  margin-top: 2.5em;
+}
+
+.bannedComponent > h3 {
+  text-decoration: underline;
+}
+
+.bannedComponent > p {
+  margin-bottom: 0;
+}
+
+/* Stying of card details form component */
+.card-info-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+/* Stying of validate button */
+.validate-btn {
+  min-width: 250px;
+  height: 50px;
+  border-radius: 6px;
+  margin: 2em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: background-color 3s;
+  transition: box-shadow 3s;
+}
+
+.validate-btn:hover,
+.validate-btn:focus {
+  cursor: pointer;
+  font-weight: bolder;
+  background-color: lightgrey;
+  box-shadow: 5px 10px #1c1c1c;
+}
+
+/* Stying of input, select elements */
+input,
+select {
+  min-width: 200px;
+  height: 30px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 1em;
+  border-radius: 4px;
+}
+
+select:hover,
+select:focus {
+  font-weight: bolder;
+  background-color: lightgrey;
+}
+
+input:hover,
+input:focus {
+  font-weight: bolder;
+  background-color: lightgrey;
+}
+#countries {
+  width: 80%;
+  height: 100px;
+}
+
+/* media queries*/
+@media screen and (min-width: 760px) {
+  .container {
+    width: 900px;
+    margin: 0 auto;
+  }
+}
