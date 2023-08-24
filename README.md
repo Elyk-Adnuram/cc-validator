@@ -19,7 +19,7 @@ Upon clicking submit the application will inform the user that the credit card d
 
 If the credit card is from a banned country as listed in the "banned countries list", the user will be informed and requested to select an alternative country.
 
-The application is hosted at the following URL: https://credit-card-validator01.netlify.app/ , alternatively the clone the code from the git repository and extract the files from the zip folder
+The application is hosted at the following URL: https://credit-card-validator01.netlify.app/ , alternatively clone the code from the git repository and extract the files from the zip folder
 
 After opening the files in your code editor, run the "npm i" command to install dependencies
 
