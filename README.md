@@ -1,6 +1,6 @@
 # Credit Card Validator
 
-This application will determine if the credit card number entered by the user is valid. 
+This application will determine if the credit card number entered by the user is valid.
 
 ## Styling
 
@@ -17,14 +17,8 @@ Netlify was chosen as it is easy to use and provides a free-tier for deployment.
 
 ## How to use the application
 
-A user will enter the credit card details and include the country name that the credit card is from on the Home screen user interface.
-
-Upon clicking submit the application will inform the user that the credit card details or valid or if there are invalid details entered.
-
-If the credit card is from a banned country as listed in the "banned countries list", the user will be informed and requested to select an alternative country.
-
-The application is hosted at the following URL: https://credit-card-validator01.netlify.app/ , alternatively clone the code from the git repository and extract the files from the zip folder
-
-After opening the files in your code editor, run the "npm i" command to install dependencies
-
-To start the application run the "npm run dev" command.
+- A user will enter the credit card details.
+- Upon clicking submit the application will inform the user that the credit card details or valid or if there are invalid details entered.
+- The application is hosted at the following URL: https://credit-card-validator01.netlify.app/ , alternatively clone the code from the git repository and extract the files from the zip folder
+- After opening the files in your code editor, run the "npm i" command to install dependencies
+- To start the application run the "npm run dev" command.

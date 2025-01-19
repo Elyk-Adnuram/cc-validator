@@ -1,102 +1,188 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+/* Modern design system variables */
+:root {
+  --primary-color: #6366f1;
+  --primary-hover: #4f46e5;
+  --background-color: #f8fafc;
+  --card-background: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --error-color: #ef4444;
+  --success-color: #22c55e;
+  --border-radius: 12px;
+  --input-radius: 8px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --transition: all 0.2s ease-in-out;
+}
 
+/* Base styles */
 body {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: whitesmoke;
+  background-color: var(--background-color);
+  color: var(--text-primary);
 }
-/* Stying of Header component */
+
+/* Header styling */
 .header {
-  display: flex;
-  justify-content: center;
-  background-color: #363535;
-  color: #ffff;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+  color: white;
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-md);
 }
 
-/* Stying of banned countries component */
-.bannedComponent {
+.header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
   text-align: center;
 }
 
-.margin-top {
-  margin-top: 2.5em;
+/* Container styling */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-.bannedComponent > h3 {
-  text-decoration: underline;
-}
-
-.bannedComponent > p {
-  margin-bottom: 0;
-}
-
-/* Stying of card details form component */
+/* Card styling */
 .card-info-form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  gap: 1rem;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
 }
 
-/* Stying of validate button */
-.validate-btn {
-  min-width: 250px;
-  height: 50px;
-  border-radius: 6px;
-  margin: 2em;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  transition: background-color 3s;
-  transition: box-shadow 3s;
+/* Form group styling */
+.form-group {
+  margin-bottom: 1.5rem;
 }
 
-.validate-btn:hover,
-.validate-btn:focus {
-  cursor: pointer;
-  font-weight: bolder;
-  background-color: lightgrey;
-  box-shadow: 5px 10px #1c1c1c;
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
-/* Stying of input, select elements */
+/* Input styling */
 input,
 select {
-  min-width: 200px;
-  height: 30px;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--input-radius);
+  background-color: #fff;
+  color: var(--text-primary);
   font-size: 1rem;
-  line-height: 1.5;
-  margin: 0 1em;
-  border-radius: 4px;
-}
-
-select:hover,
-select:focus {
-  font-weight: bolder;
-  background-color: lightgrey;
+  transition: var(--transition);
+  margin: 0;
 }
 
 input:hover,
-input:focus {
-  font-weight: bolder;
-  background-color: lightgrey;
-}
-#countries {
-  width: 80%;
-  height: 100px;
+select:hover {
+  border-color: var(--primary-color);
 }
 
-/* media queries*/
-@media screen and (min-width: 760px) {
-  .container {
-    width: 900px;
-    margin: 0 auto;
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  background-color: white;
+}
+
+option {
+  padding: 0.5rem;
+}
+
+option:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Button styling */
+.validate-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--input-radius);
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+  max-width: 300px;
+  margin: 1.5rem auto;
+  display: block;
+}
+
+.validate-btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.validate-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+
+/* Error styling */
+.error {
+  border-color: var(--error-color) !important;
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* Grid layout for form fields */
+@media screen and (min-width: 640px) {
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
+}
+
+/* Responsive design */
+@media screen and (max-width: 640px) {
+  .card-info-form {
+    padding: 1.5rem;
+  }
+
+  input,
+  select {
+    font-size: 16px; /* Prevents zoom on mobile */
+  }
+}
+
+/* Loading state */
+.validate-btn[disabled] {
+  background-color: var(--text-secondary);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Success state */
+.success {
+  border-color: var(--success-color) !important;
+}
+
+.success-message {
+  color: var(--success-color);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  display: block;
 }

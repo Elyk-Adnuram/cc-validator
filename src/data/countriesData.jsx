@@ -1,3 +1,4 @@
+// TODO implement banned countries feature
 export const countriesData = [
   "Afghanistan",
   "Åland Islands",
